@@ -3,8 +3,7 @@
     $.fn.loadingBox = function (action, options) {
 
         var settings = $.extend({
-            // These are the defaults.
-            primaryColor: "#3498db", // hex
+            primaryColor: '#3498db', // hex
             secondaryColor: '#f3f3f3', // hex
             width: 5, // pixels
             radius: 0, // pixels
@@ -14,6 +13,7 @@
         return this.each(function () {
 
             if (action === 'add') {
+                
                 $loadingBox = $("<div class='loading-box'></div>");
                 $spinnerWrapper = $("<div class='spinner-wrapper'></div>");
                 $spinner = $("<div class='spinner'>");
@@ -23,8 +23,6 @@
 
                 if ( settings.radius === 0 )
                     settings.radius = (parentHeight > parentWidth) ? parentWidth / 3.0 : parentHeight / 3.0;
-
-                console.log(settings.width);
 
                 $spinner.css({
                     'opacity': '1',
@@ -65,7 +63,7 @@
                 $(this).find('.loading-box').remove();
             }
 
-        })
+        });
 
     };
 
